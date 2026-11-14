@@ -19,14 +19,14 @@ export default function MenuGrid({ category, onItemClick }: MenuGridProps) {
 
   if (filtered.length === 0) {
     return (
-      <div className="px-4 py-12 text-center text-[#3C2F2F]/50">
+      <div className="py-16 text-center text-gray-400">
         {t("No items in this category yet.", "لا توجد عناصر في هذه الفئة بعد.")}
       </div>
     );
   }
 
   return (
-    <div className="px-4 py-4 grid grid-cols-2 gap-3 sm:gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {filtered.map((item) => (
         <MenuCard key={item.id} item={item} onClick={() => onItemClick(item)} />
       ))}

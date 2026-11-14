@@ -40,19 +40,16 @@ export default function ItemModal({ item, onClose }: ItemModalProps) {
       role="dialog"
       aria-modal="true"
     >
-      {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200"
+        className="absolute inset-0 bg-black/40 backdrop-blur-[2px] animate-in fade-in duration-200"
         onClick={onClose}
       />
 
-      {/* Modal panel */}
       <div
         className={`relative w-full max-w-md mx-auto bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden animate-in slide-in-from-bottom duration-300 max-h-[90vh] flex flex-col ${
           dir === "rtl" ? "text-right" : "text-left"
         }`}
       >
-        {/* Image */}
         <div className="relative aspect-[4/3] flex-shrink-0">
           <Image
             src={item.image}
@@ -64,33 +61,22 @@ export default function ItemModal({ item, onClose }: ItemModalProps) {
           />
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center hover:bg-black/60 transition-colors"
+            className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/35 backdrop-blur-md text-white flex items-center justify-center hover:bg-black/50 transition-colors"
             aria-label={t("Close", "إغلاق")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Content */}
         <div className="p-5 overflow-y-auto">
           <div className="flex items-start justify-between gap-3 mb-2">
-            <h2 className="text-xl font-bold text-[#3C2F2F] leading-tight">
+            <h2 className="text-xl font-bold text-gray-900 leading-tight">
               {t(item.name.en, item.name.ar)}
             </h2>
-            <p className="text-lg font-semibold text-[#C9A227] whitespace-nowrap">
+            <p className="text-lg font-semibold text-[#A7744A] whitespace-nowrap">
               {item.price} {t("AED", "د.إ")}
             </p>
           </div>
@@ -102,10 +88,10 @@ export default function ItemModal({ item, onClose }: ItemModalProps) {
                   key={tag}
                   className={`px-2.5 py-0.5 text-xs font-medium rounded-full ${
                     tag === "winter"
-                      ? "bg-[#C9A227]/20 text-[#8B7015]"
+                      ? "bg-[#A7744A]/15 text-[#A7744A]"
                       : tag === "new"
-                      ? "bg-emerald-100 text-emerald-700"
-                      : "bg-[#3C2F2F]/10 text-[#3C2F2F]"
+                      ? "bg-emerald-50 text-emerald-700"
+                      : "bg-gray-100 text-gray-700"
                   }`}
                 >
                   {tag === "winter"
@@ -118,7 +104,7 @@ export default function ItemModal({ item, onClose }: ItemModalProps) {
             </div>
           )}
 
-          <p className="text-[#3C2F2F]/80 text-[15px] leading-relaxed">
+          <p className="text-gray-600 text-[15px] leading-relaxed">
             {t(item.description.en, item.description.ar)}
           </p>
         </div>

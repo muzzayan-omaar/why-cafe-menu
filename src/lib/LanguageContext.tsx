@@ -46,8 +46,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Prevent flash of wrong language
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-[#F8F1E9] flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-[#3C2F2F] border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen bg-[#f8f6f3] flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-[#A7744A] border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }

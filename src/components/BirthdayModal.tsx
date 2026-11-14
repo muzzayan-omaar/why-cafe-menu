@@ -29,7 +29,7 @@ export default function BirthdayModal({ open, onClose }: BirthdayModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center">
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
         onClick={onClose}
       />
       <div
@@ -45,10 +45,10 @@ export default function BirthdayModal({ open, onClose }: BirthdayModalProps) {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center"
+            className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/35 backdrop-blur-md text-white flex items-center justify-center"
             aria-label={t("Close", "إغلاق")}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -63,37 +63,37 @@ export default function BirthdayModal({ open, onClose }: BirthdayModalProps) {
         </div>
 
         <div className="p-5 space-y-4">
-          <p className="text-[#3C2F2F]/80 text-[15px] leading-relaxed">
+          <p className="text-gray-600 text-[15px] leading-relaxed">
             {t(
               "Make your special day unforgettable. We offer custom birthday setups, decorations, table arrangements and dedicated service so you can simply enjoy the moment.",
               "اجعل يومك الخاص لا يُنسى. نقدم تجهيزات عيد ميلاد مخصصة، ديكورات، تنسيق طاولات وخدمة مخصصة حتى تستمتع باللحظة بكل راحة."
             )}
           </p>
 
-          <ul className="space-y-2 text-sm text-[#3C2F2F]/90">
+          <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A7744A]" />
               {t("Custom decorations & balloons", "ديكورات وبالونات مخصصة")}
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A7744A]" />
               {t("Special table setup", "تجهيز طاولة خاص")}
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A7744A]" />
               {t("Dedicated staff attention", "اهتمام من الطاقم")}
             </li>
           </ul>
 
           <a
-            href="https://wa.me/971500000000?text=Hi%20WHY%20CAFE%2C%20I%27d%20like%20to%20enquire%20about%20a%20birthday%20setup"
+            href="https://wa.me/971500000000?text=Hi%20WHY%20Cafe%2C%20I%27d%20like%20to%20enquire%20about%20a%20birthday%20setup"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center py-3.5 rounded-2xl bg-[#3C2F2F] text-white font-semibold text-[15px] active:scale-[0.98] transition-transform"
+            className="block w-full text-center py-3.5 rounded-2xl bg-[#A7744A] text-white font-semibold text-[15px] active:scale-[0.98] transition-transform shadow-sm"
           >
             {t(birthdaySpecial.cta.en, birthdaySpecial.cta.ar)}
           </a>
-          <p className="text-center text-xs text-[#3C2F2F]/50">
+          <p className="text-center text-xs text-gray-400">
             {t("Or speak to our team in-store", "أو تحدث مع فريقنا في المكان")}
           </p>
         </div>
