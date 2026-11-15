@@ -17,12 +17,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Detect browser language
     const stored = localStorage.getItem("why-cafe-locale") as Locale | null;
     if (stored === "en" || stored === "ar") {
       setLocaleState(stored);
     } else {
-      const browserLang = navigator.language || (navigator as any).userLanguage || "en";
+      const nav = navigator as Navigator & { userLanguage?: string };
+      const browserLang = navigator.language || nav.userLanguage || "en";
       const isArabic = browserLang.toLowerCase().startsWith("ar");
       setLocaleState(isArabic ? "ar" : "en");
     }
@@ -43,7 +43,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const t = (en: string, ar: string) => (locale === "ar" ? ar : en);
   const dir = locale === "ar" ? "rtl" : "ltr";
 
-  // Prevent flash of wrong language
   if (!mounted) {
     return (
       <div className="min-h-screen bg-[#f8f6f3] flex items-center justify-center">
