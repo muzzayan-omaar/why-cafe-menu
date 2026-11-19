@@ -267,7 +267,7 @@ export const menuItems: MenuItem[] = [
       en: "Crispy fries tossed in truffle oil and parmesan.",
       ar: "بطاطس مقرمشة مغطاة بزيت الكمأة والبارميزان.",
     },
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088887/611667784_18167885062385069_1611826583127877681_n_c4jx3r.jpg",
     tags: ["special"],
   },
   {
@@ -279,7 +279,7 @@ export const menuItems: MenuItem[] = [
       en: "Classic golden crispy fries. Perfect side.",
       ar: "بطاطس ذهبية مقرمشة كلاسيكية. طبق جانبي مثالي.",
     },
-    image: "https://images.unsplash.com/photo-1630384060421-cb20d0e06475?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088887/611667784_18167885062385069_1611826583127877681_n_c4jx3r.jpg",
   },
 
   // Drinks
