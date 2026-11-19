@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState, } from "react";
 import type { Locale } from "./menu-data";
 
 interface LanguageContextType {
