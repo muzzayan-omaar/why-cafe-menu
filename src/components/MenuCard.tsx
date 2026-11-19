@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
@@ -15,45 +16,63 @@ export default function MenuCard({ item, onClick }: MenuCardProps) {
   return (
     <button
       onClick={onClick}
-      className="group w-full text-left rounded-2xl overflow-hidden bg-white/10 backdrop-blur-md border border-white/10 shadow-lg active:scale-[0.98] transition-all hover:bg-white/15"
+      className="group relative w-full text-left rounded-2xl overflow-hidden bg-[#17120f] border border-white/15 shadow-xl active:scale-[0.98] transition-all duration-300 hover:border-white/30"
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-[4/4.2] overflow-hidden">
+
+        {/* Full-bleed food photograph */}
         <Image
           src={item.image}
           alt={t(item.name.en, item.name.ar)}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
           sizes="(max-width: 640px) 100vw, 50vw"
+          className="object-cover object-[center_80%] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         />
+
+        {/* Subtle shading for text readability */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+
+        {/* Tags */}
         {(item.tags?.includes("special") ||
           item.tags?.includes("winter") ||
           item.tags?.includes("new")) && (
-          <div className="absolute top-2.5 left-2.5 flex gap-1.5">
+          <div className="absolute top-3 left-3 z-20 flex gap-1.5">
+
             {item.tags.includes("new") && (
-              <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-500 text-white">
+              <span className="px-2.5 py-1 text-[10px] font-semibold rounded-full bg-emerald-500/90 backdrop-blur-xl text-white border border-white/20">
                 {t("New", "جديد")}
               </span>
             )}
+
             {item.tags.includes("winter") && (
-              <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#A7744A] text-white">
+              <span className="px-2.5 py-1 text-[10px] font-semibold rounded-full bg-[#A7744A]/90 backdrop-blur-xl text-white border border-white/20">
                 {t("Winter", "شتاء")}
               </span>
             )}
-            {item.tags.includes("special") && !item.tags.includes("winter") && (
-              <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-black/60 text-white">
-                {t("Special", "خاص")}
-              </span>
-            )}
+
+            {item.tags.includes("special") &&
+              !item.tags.includes("winter") && (
+                <span className="px-2.5 py-1 text-[10px] font-semibold rounded-full bg-black/50 backdrop-blur-xl text-white border border-white/20">
+                  {t("Special", "خاص")}
+                </span>
+              )}
+
           </div>
         )}
-      </div>
-      <div className="p-3.5">
-        <h3 className="font-semibold text-white text-[15px] leading-snug line-clamp-1">
-          {t(item.name.en, item.name.ar)}
-        </h3>
-        <p className="mt-1 text-sm font-medium text-[#efceb2]">
-          {item.price} {t("AED", "د.إ")}
-        </p>
+
+        {/* Text directly over the image */}
+        <div className="absolute bottom-0 inset-x-0 p-4 z-10">
+
+          <h3 className="font-bold text-white text-[15px] leading-snug line-clamp-2 drop-shadow-lg">
+            {t(item.name.en, item.name.ar)}
+          </h3>
+
+          <p className="mt-1.5 text-sm font-semibold text-[#efceb2] drop-shadow-lg">
+            {item.price} {t("AED", "د.إ")}
+          </p>
+
+        </div>
+
       </div>
     </button>
   );

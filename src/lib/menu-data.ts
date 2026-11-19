@@ -41,7 +41,7 @@ export const menuItems: MenuItem[] = [
       en: "Rich, concentrated shot of pure coffee. Bold and intense.",
       ar: "جرعة مركزة غنية من القهوة النقية. قوية ومكثفة.",
     },
-    image: "https://images.unsplash.com/photo-1510591509090-bd8ff95a8d3c?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091269/espresso_czbj73.jpg",
     tags: ["special"],
   },
   {
@@ -111,18 +111,18 @@ export const menuItems: MenuItem[] = [
       en: "Premium ceremonial-grade matcha whisked to perfection.",
       ar: "ماتشا فاخر من الدرجة الاحتفالية يُخفق إلى الكمال.",
     },
-    image: "https://images.unsplash.com/photo-1536256263959-2701e1bf5e70?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091446/matcha_jb9huh.jpg",
   },
   {
-    id: "cloud-matcha",
+    id: "strawberry-matcha",
     category: "coffee",
-    name: { en: "Cloud Matcha", ar: "كلاود ماتشا" },
+    name: { en: "Strawberry Matcha", ar: "ماتشا الفراولة" },
     price: 26,
     description: {
-      en: "Fluffy cloud foam over vibrant green matcha.",
-      ar: "رغوة سحابية ناعمة فوق ماتشا أخضر نابض.",
+      en: "A delightful blend of fresh strawberries and creamy matcha.",
+      ar: "مزيج لذيذ من الفراولة الطازجة والماتشا الكريمية.",
     },
-    image: "https://images.unsplash.com/photo-1515823662972-da6a2e4d3000?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091445/strawberry_matcha_rkgb7q.jpg",
     tags: ["new", "special"],
   },
   {
@@ -131,10 +131,10 @@ export const menuItems: MenuItem[] = [
     name: { en: "Hibiscus", ar: "كركديه" },
     price: 18,
     description: {
-      en: "Refreshing floral hibiscus infusion, served hot or iced.",
-      ar: "منقوع كركديه زهري منعش، يُقدم ساخناً أو مثلجاً.",
+      en: "Refreshing floral hibiscus infusion, served only iced.",
+      ar: "منقوع الكركديه الزهري المنعش، يُقدم مثلجًا فقط.",
     },
-    image: "https://images.unsplash.com/photo-1556679343-c7306c197cbb?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091569/hibiscus_xq42zj.jpg",
   },
 
   // Desserts
@@ -196,6 +196,50 @@ export const menuItems: MenuItem[] = [
     },
     image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80",
   },
+    {
+    id: "chocolate-fondant-cake",
+    category: "desserts",
+    name: { en: "Chocolate Fondant Cake", ar: "كعكة فوندانتشو الشوكولاتة" },
+    price: 25,
+    description: {
+      en: "Rich, decadent chocolate fondant cake with a gooey center.",
+      ar: "كعكة فوندانتشو شوكولاتة غنية وفاخرة مع مركز لزج.",
+    },
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088889/606901849_18166839142385069_8155258199179333640_n_yb4uvv.jpg",
+  },
+    {
+    id: "molten-date-cake",
+    category: "desserts",
+    name: { en: "Molten Date Cake", ar: "كعكة تمر مذابة" },
+    price: 25,
+    description: {
+      en: "Molten, gooey date cake with a rich, caramelized flavor.",
+      ar: "كعكة تمر مذابة مع طعم غني ومكرمل.",
+    },
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088889/606455567_18166839124385069_3936425273809336348_n_fqdafj.jpg",
+  },
+     {
+    id: "cheese-cake",
+    category: "desserts",
+    name: { en: "Cheese Cake", ar: "كعكة الجبن" },
+    price: 25,
+    description: {
+      en: "Rich, creamy cheese cake with a buttery crust.",
+      ar: "كعكة جبن غنية ومرطبة مع قشرة زيتونية.",
+    },
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088889/607354786_18166959688385069_6380385102377383509_n_n4b79m.jpg",
+  },
+      {
+    id: "san-sebastian-cake",
+    category: "desserts",
+    name: { en: "San Sebastian Cake", ar: "كعكة سان سebinستيان" },
+    price: 25,
+    description: {
+      en: "soft, creamy San Sebastian cake with a caramelized top.",
+      ar: "كعكة سان سebinستيان ناعمة ومرطبة مع قشرة مكرملة.",
+    },
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088887/588971764_18166839094385069_4257818430379721383_n_bucbte.jpg",
+  },
 
   // Pizza
   {
@@ -207,7 +251,7 @@ export const menuItems: MenuItem[] = [
       en: "Our house signature pizza with premium toppings.",
       ar: "بيتزا التوقيع لدينا مع إضافات فاخرة.",
     },
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088888/612975825_18167884735385069_4283501812795879994_n_pxkswp.jpg",
     tags: ["special"],
   },
   {
@@ -219,7 +263,7 @@ export const menuItems: MenuItem[] = [
       en: "Spicy buffalo chicken, ranch drizzle, mozzarella.",
       ar: "دجاج بافلو حار، رذاذ رانش، موزاريلا.",
     },
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088887/609554780_18167884957385069_2555713072061974927_n_xmcjnp.jpg",
   },
   {
     id: "margherita",
@@ -230,7 +274,7 @@ export const menuItems: MenuItem[] = [
       en: "Classic tomato, fresh mozzarella, basil.",
       ar: "طماطم كلاسيكية، موزاريلا طازجة، ريحان.",
     },
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088888/587897970_18167884675385069_7052284786848846720_n_yskvb5.jpg",
   },
   {
     id: "spicy-pepperoni",
@@ -241,7 +285,7 @@ export const menuItems: MenuItem[] = [
       en: "Loaded with spicy pepperoni and melted cheese.",
       ar: "محملة بالبيبروني الحار والجبن الذائب.",
     },
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088888/610689208_18167884846385069_7041015328825457575_n_tu8baz.jpg",
     tags: ["winter"],
   },
   {
@@ -253,7 +297,7 @@ export const menuItems: MenuItem[] = [
       en: "Slow-braised short ribs, caramelized onion, mozzarella.",
       ar: "أضلاع قصيرة مطهوة ببطء، بصل مكرمل، موزاريلا.",
     },
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795088888/608245405_18167884402385069_311652686869245970_n_wbarnj.jpg",
     tags: ["special"],
   },
 
@@ -292,7 +336,7 @@ export const menuItems: MenuItem[] = [
       en: "Chilled soft drink of your choice.",
       ar: "مشروب غازي بارد من اختيارك.",
     },
-    image: "https://images.unsplash.com/photo-1629203851120-3fc7b77b2c36?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091817/pepsi_hbhm4h.jpg",
   },
   {
     id: "still-water",
@@ -303,7 +347,7 @@ export const menuItems: MenuItem[] = [
       en: "Refreshing still mineral water.",
       ar: "ماء معدني عادي منعش.",
     },
-    image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091816/download_2_yarn9w.webp",
   },
   {
     id: "sparkling-water",
@@ -314,7 +358,7 @@ export const menuItems: MenuItem[] = [
       en: "Crisp sparkling mineral water.",
       ar: "ماء معدني فوار منعش.",
     },
-    image: "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795091816/sparkling_water_jwafjg.jpg",
   },
 ];
 
