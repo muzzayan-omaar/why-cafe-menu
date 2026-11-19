@@ -18,10 +18,10 @@ export default function CategoryTabs({ active, onChange }: CategoryTabsProps) {
     >
       <button
         onClick={() => onChange("all")}
-        className={`flex-shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap shadow-sm ${
+        className={`flex-shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
           active === "all"
             ? "bg-[#A7744A] text-white shadow-md"
-            : "bg-white/80 text-gray-700 hover:bg-[#A7744A]/15"
+            : "bg-white/10 text-white/80 backdrop-blur-sm border border-white/10 hover:bg-white/15"
         }`}
       >
         {t("Top Seller", "الأكثر مبيعاً")}
@@ -30,10 +30,10 @@ export default function CategoryTabs({ active, onChange }: CategoryTabsProps) {
         <button
           key={cat.id}
           onClick={() => onChange(cat.id)}
-          className={`flex-shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap shadow-sm ${
+          className={`flex-shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
             active === cat.id
               ? "bg-[#A7744A] text-white shadow-md"
-              : "bg-white/80 text-gray-700 hover:bg-[#A7744A]/15"
+              : "bg-white/10 text-white/80 backdrop-blur-sm border border-white/10 hover:bg-white/15"
           }`}
         >
           {t(cat.label.en, cat.label.ar)}

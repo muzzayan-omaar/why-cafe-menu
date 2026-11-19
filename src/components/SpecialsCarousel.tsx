@@ -30,7 +30,7 @@ export default function SpecialsCarousel({
             <button
               key={event.id}
               onClick={onBirthdayClick}
-              className="flex-shrink-0 w-[155px] snap-start rounded-2xl overflow-hidden bg-white shadow-sm border border-black/5 text-left active:scale-[0.98] transition-transform"
+              className="flex-shrink-0 w-[155px] snap-start rounded-2xl overflow-hidden bg-white/10 backdrop-blur-md border border-white/10 text-left active:scale-[0.98] transition-transform"
             >
               <div className="relative h-[90px]">
                 <Image
@@ -40,16 +40,16 @@ export default function SpecialsCarousel({
                   className="object-cover"
                   sizes="155px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <span className="absolute top-2 left-2 px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#A7744A] text-white">
                   {t("Event", "مناسبة")}
                 </span>
               </div>
               <div className="p-2.5">
-                <p className="text-sm font-semibold text-gray-900 leading-tight line-clamp-1">
+                <p className="text-sm font-semibold text-white leading-tight line-clamp-1">
                   {t(event.title.en, event.title.ar)}
                 </p>
-                <p className="text-[11px] text-gray-500 mt-0.5 line-clamp-2">
+                <p className="text-[11px] text-white/60 mt-0.5 line-clamp-2">
                   {t(event.subtitle.en, event.subtitle.ar)}
                 </p>
               </div>
@@ -62,7 +62,7 @@ export default function SpecialsCarousel({
           <button
             key={menuItem.id}
             onClick={() => onItemClick?.(menuItem)}
-            className="flex-shrink-0 w-[145px] snap-start rounded-2xl overflow-hidden bg-white shadow-sm border border-black/5 text-left active:scale-[0.98] transition-transform"
+            className="flex-shrink-0 w-[145px] snap-start rounded-2xl overflow-hidden bg-white/10 backdrop-blur-md border border-white/10 text-left active:scale-[0.98] transition-transform"
           >
             <div className="relative h-[90px]">
               <Image
@@ -79,10 +79,10 @@ export default function SpecialsCarousel({
               )}
             </div>
             <div className="p-2.5">
-              <p className="text-sm font-semibold text-gray-900 leading-tight line-clamp-1">
+              <p className="text-sm font-semibold text-white leading-tight line-clamp-1">
                 {t(menuItem.name.en, menuItem.name.ar)}
               </p>
-              <p className="text-xs font-medium text-[#A7744A] mt-0.5">
+              <p className="text-xs font-medium text-[#efceb2] mt-0.5">
                 {menuItem.price} {t("AED", "د.إ")}
               </p>
             </div>

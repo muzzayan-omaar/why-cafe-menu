@@ -14,24 +14,14 @@ export default function IntroOverlay() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    // Only show once per browser session
-    if (typeof window === "undefined") return;
-    const seen = sessionStorage.getItem("why-intro-seen");
-    if (seen === "1") {
-      setVisible(false);
-      return;
-    }
-
     const startFade = () => {
       setFading(true);
-      sessionStorage.setItem("why-intro-seen", "1");
-      setTimeout(() => setVisible(false), 600); // match CSS transition
+      setTimeout(() => setVisible(false), 600);
     };
 
-    // Force end at MAX_MS
+    // Always play – compulsory every open
     timerRef.current = setTimeout(startFade, MAX_MS);
 
-    // Also end if video somehow ends earlier
     const vid = videoRef.current;
     if (vid) {
       const onEnded = () => startFade();
@@ -50,7 +40,6 @@ export default function IntroOverlay() {
   const skip = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
     setFading(true);
-    sessionStorage.setItem("why-intro-seen", "1");
     setTimeout(() => setVisible(false), 400);
   };
 
@@ -73,15 +62,13 @@ export default function IntroOverlay() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Soft vignette + brand */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none" />
 
       <div className="relative z-10 text-center text-white px-6">
         <p className="text-3xl font-semibold tracking-tight drop-shadow-lg">WHY</p>
         <p className="text-sm tracking-[0.25em] uppercase opacity-90 mt-1">Cafe</p>
       </div>
 
-      {/* Tap to skip hint */}
       <button
         onClick={skip}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 text-xs tracking-wide"

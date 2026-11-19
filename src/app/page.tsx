@@ -7,7 +7,7 @@ import ItemModal from "@/components/ItemModal";
 import BirthdayModal from "@/components/BirthdayModal";
 import SpecialsCarousel from "@/components/SpecialsCarousel";
 import IntroOverlay from "@/components/IntroOverlay";
-import { VenueAmbient, VenueStrip } from "@/components/VenueAccent";
+import { VenueBackground } from "@/components/VenueAccent";
 import { type Category, type MenuItem } from "@/lib/menu-data";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -34,23 +34,23 @@ export default function Home() {
 
   return (
     <>
-      {/* 4-second intro video (first open only) */}
+      {/* Compulsory intro every time */}
       <IntroOverlay />
 
-      {/* Soft venue photo as ambient background */}
-      <VenueAmbient />
+      {/* Single full-page venue photo (dark) */}
+      <VenueBackground />
 
-      <div className="min-h-screen text-gray-900 pb-safe relative">
+      <div className="min-h-screen text-white pb-safe relative">
         <div className="relative z-10 max-w-3xl mx-auto px-4 pb-12 pt-6">
-          {/* Top bar: Logo + Language */}
-          <div className="flex items-start justify-between mb-4">
+          {/* Top bar */}
+          <div className="flex items-start justify-between mb-5">
             <div>
-              <h1 className="text-[22px] font-bold leading-tight text-gray-900 tracking-tight">
+              <h1 className="text-[22px] font-bold leading-tight text-white tracking-tight">
                 WHY
                 <br />
                 <span className="font-semibold">Cafe</span>
               </h1>
-              <p className="text-xs text-gray-500 mt-1 leading-snug">
+              <p className="text-xs text-white/60 mt-1 leading-snug">
                 {t("Brewed Fresh,", "محضّرة طازجة،")}
                 <br />
                 {t("Served Warm", "تُقدَّم دافئة")}
@@ -59,26 +59,22 @@ export default function Home() {
 
             <button
               onClick={() => setLocale(locale === "en" ? "ar" : "en")}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#efceb2] text-white text-xs font-semibold shadow-sm active:scale-95 transition-transform"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#A7744A] text-white text-xs font-semibold shadow-sm active:scale-95 transition-transform"
             >
               {locale === "en" ? "AR 🇸🇦" : "EN 🇬🇧"}
             </button>
           </div>
 
-          {/* Thin venue photo strip – accent only */}
-          <VenueStrip />
-
           {/* Greeting */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-1">
+          <h2 className="text-2xl font-semibold text-white mb-1">
             {greeting} {emoji}
           </h2>
 
-          {/* Section title */}
-          <p className="text-lg font-semibold text-gray-900 mb-3">
+          <p className="text-lg font-semibold text-white/90 mb-3">
             {t(`${dayName}'s picks`, `اختيارات ${dayName}`)}
           </p>
 
-          {/* Specials carousel */}
+          {/* Specials */}
           <div className="mb-5 -mx-1">
             <SpecialsCarousel
               onItemClick={setSelectedItem}
@@ -86,16 +82,16 @@ export default function Home() {
             />
           </div>
 
-          {/* Category tabs */}
+          {/* Tabs */}
           <CategoryTabs active={activeCategory} onChange={setActiveCategory} />
 
-          {/* Menu grid */}
+          {/* Menu */}
           <main className="mt-4">
             <MenuGrid category={activeCategory} onItemClick={setSelectedItem} />
           </main>
 
           {/* Footer */}
-          <footer className="mt-10 text-center text-xs text-gray-400">
+          <footer className="mt-10 text-center text-xs text-white/40">
             <p>{t("Prices in AED", "الأسعار بالدرهم")}</p>
             <p className="mt-1">WHY Cafe · Al Qana, Abu Dhabi</p>
           </footer>

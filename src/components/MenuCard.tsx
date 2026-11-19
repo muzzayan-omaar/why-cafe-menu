@@ -15,7 +15,7 @@ export default function MenuCard({ item, onClick }: MenuCardProps) {
   return (
     <button
       onClick={onClick}
-      className="group w-full text-left rounded-2xl overflow-hidden bg-white/90 shadow-sm border border-black/[0.04] active:scale-[0.98] transition-all hover:shadow-md"
+      className="group w-full text-left rounded-2xl overflow-hidden bg-white/10 backdrop-blur-md border border-white/10 shadow-lg active:scale-[0.98] transition-all hover:bg-white/15"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
@@ -40,7 +40,7 @@ export default function MenuCard({ item, onClick }: MenuCardProps) {
               </span>
             )}
             {item.tags.includes("special") && !item.tags.includes("winter") && (
-              <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-gray-900/80 text-white">
+              <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-black/60 text-white">
                 {t("Special", "خاص")}
               </span>
             )}
@@ -48,10 +48,10 @@ export default function MenuCard({ item, onClick }: MenuCardProps) {
         )}
       </div>
       <div className="p-3.5">
-        <h3 className="font-semibold text-gray-900 text-[15px] leading-snug line-clamp-1">
+        <h3 className="font-semibold text-white text-[15px] leading-snug line-clamp-1">
           {t(item.name.en, item.name.ar)}
         </h3>
-        <p className="mt-1 text-sm font-medium text-[#A7744A]">
+        <p className="mt-1 text-sm font-medium text-[#efceb2]">
           {item.price} {t("AED", "د.إ")}
         </p>
       </div>
