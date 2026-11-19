@@ -329,7 +329,7 @@ export const birthdaySpecial: SpecialEvent = {
     en: "Birthday setups · Decorations · Special service",
     ar: "تجهيزات عيد ميلاد · ديكورات · خدمة خاصة",
   },
-  image: "https://images.unsplash.com/photo-1464349095431-bb66fe1b0c0e?w=800&q=80",
+  image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795087144/Golden-Hour_Birthday_Afternoon_Tea_by_the_Water_pyxf7i.png",
   cta: {
     en: "Ask us about packages",
     ar: "اسألنا عن الباقات",
