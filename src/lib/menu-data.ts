@@ -170,7 +170,7 @@ export const menuItems: MenuItem[] = [
       en: "House special layered dessert — light, elegant and unforgettable.",
       ar: "حلوى طبقية خاصة بالمنزل — خفيفة وأنيقة ولا تُنسى.",
     },
-    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
+    image: "https://res.cloudinary.com/diszilwhc/image/upload/v1795094135/Screenshot_2026-11-19_171514_qxncfq.png",
     tags: ["special"],
   },
   {
